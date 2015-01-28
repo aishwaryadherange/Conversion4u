@@ -1,0 +1,5 @@
+ErrorDocument 404 http://www.conversion4u.com/index.html
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^(.+\.)([a-zA-Z0-9-]+\.([a-z]{2,4})|co\.uk|me\.uk|org\.uk|priv\.no)$
+RewriteCond %{HTTP_HOST} ([a-zA-Z0-9-]+\.([a-z]{2,4})|co\.uk|me\.uk|org\.uk|priv\.no)$
+RewriteRule ^(.*)$ http://www.%1/ [L,QSA,R=301]
